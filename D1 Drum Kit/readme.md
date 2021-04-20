@@ -4,7 +4,7 @@
 
 ## 实现效果
 
-![界面](https://gitee.com/shianiiiu/picgo_bed/raw/master/img/20210420175818.png)
+![界面](https://raw.githubusercontent.com/Shianiiiu/S_PicGoBed/master/Snipaste_2021-04-20_17-38-49.png?token=AKX4CJTQSBASNGSVM2VFXCDAP2ZEI)
 
 ## 涉及语法
 
