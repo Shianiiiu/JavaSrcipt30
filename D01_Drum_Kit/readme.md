@@ -2,6 +2,8 @@
 
 > 本知识总结摘自：[soyainiJavaScript-30 的中文练习指南](https://github.com/soyaine/JavaScript30)🦥
 
+[TOC]
+
 ## 实现效果
 
 ![界面](https://raw.githubusercontent.com/Shianiiiu/S_PicGoBed/master/Snipaste_2021-04-20_17-38-49.png?token=AKX4CJTQSBASNGSVM2VFXCDAP2ZEI)
@@ -33,7 +35,7 @@ const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
 const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
 ```
 
-### 如何保证按键被按住不放时，可以马上响起连续鼓点声？
+### 2、如何保证按键被按住不放时，可以马上响起连续鼓点声？
 
 **每次播放音频之前，设置播放时间戳为 0：**
 ```js
@@ -41,7 +43,7 @@ var audio = document.getElementById("video");
 audio.currentTime = 0;
 audio.play();
 ```
-### 如何使页面按钮恢复原状？
+### 3、如何使页面按钮恢复原状？
 利用一个叫 `transitionend` 的事件，它在 CSS transition 结束后会被触发。我们就可以利用这个事件，在每次打鼓的效果（尺寸变大、颜色变化）完成之后，去除相应样式。
 
 在这个页面中，发生 transition 的样式属性不止一个（box-shadow, transform, border-color），所以需要添加一个判断语句，使每发生一次按键事件时，只去除一次样式。
