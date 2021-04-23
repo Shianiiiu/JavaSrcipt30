@@ -5,8 +5,7 @@
 [TOC]
 
 ## 实现效果
-
-![界面](https://raw.githubusercontent.com/Shianiiiu/S_PicGoBed/master/Snipaste_2021-04-20_17-38-49.png?token=AKX4CJTQSBASNGSVM2VFXCDAP2ZEI)
+![界面展示](https://picgo-bed-1305701422.cos.ap-shanghai.myqcloud.com/picgo/20210423102447_js01_drumkit.png)
 
 ## 涉及语法
 
