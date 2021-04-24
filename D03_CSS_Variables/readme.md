@@ -5,6 +5,21 @@
 
 [TOC]
 
+ * [实现效果](#实现效果)
+    * [解决思路](#解决思路)
+    * [过程指南](#过程指南)
+      * [CSS 部分准备](#css-部分准备)
+      * [JS 实时更新 CSS 值](#js-实时更新-css-值)
+    * [关键语法](#关键语法)
+        * [1、全局自定义变量 \-\-ex: xxx;](#1全局自定义变量---ex-xxx)
+        * [2、filter: blur() CSS滤镜](#2filter-blur-css滤镜)
+        * [3、HTML5 中的自定义数据属性 dataset](#3html5-中的自定义数据属性-dataset)
+        * [4、监听事件change、mousemove](#4监听事件changemousemove)
+        * [5、label标签](#5label标签)
+    * [解决难点](#解决难点)
+        * [1、如何用 JavaScript 改变CSS变量值？](#1如何用-javascript-改变css变量值)
+        * [2、如何处理参数值单位（一个有 px 、另一个没有）](#2如何处理参数值单位一个有-px-另一个没有)
+
 ### 实现效果
 
 ------
