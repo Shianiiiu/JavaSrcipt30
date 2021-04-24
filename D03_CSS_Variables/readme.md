@@ -102,7 +102,7 @@ HTML5 中可以为元素添加非标准的自定义属性，只需要加上 `dat
 
 ##### 1、如何用 JavaScript 改变CSS变量值？
 
-在 JavaScript 中 `document.documentElement` 即代表文档根元素。所以要改变全局的 CSS 变量如下：
+在 JavaScript 中 `document.documentElement` 即代表文档根元素。所以要改变全局的 CSS 变量如下：[参考文档](https://developer.mozilla.org/en/docs/Web/API/Document/documentElement)
 
 ```js
 document.documentElement.style.setProperty('--base', '#fff');
