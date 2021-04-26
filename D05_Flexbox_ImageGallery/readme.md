@@ -22,10 +22,6 @@
 
 ![image-20210426120409438](https://picgo-bed-1305701422.cos.ap-shanghai.myqcloud.com/picgo/20210426120417.png)
 
-**动图GIF：**
-
-![flex panel ](https://picgo-bed-1305701422.cos.ap-shanghai.myqcloud.com/picgo/20210426120545.gif)
-
 
 
 ### 相关语法
