@@ -1,7 +1,7 @@
 # Array Cardio Day01 数组方法训练回合一 🚴‍♂️
 
 > 油管视频：[Array Cardio Practice - Day 1 ](https://www.youtube.com/watch?v=HB1ZC7czKRs&list=PLu8EoSxDXHP6CGK4YVJhL_VWetA865GOH&index=5)📺
-> 本知识总结摘自：[soyainiJavaScript-30 的中文练习指南](https://github.com/soyaine/JavaScript30) 、[winar-jin/JavaScript30-Challenge](https://github.com/winar-jin/JavaScript30-Challenge) 🦥
+> 本知识总结摘自：[soyainiJavaScript-30 中文练习指南](https://github.com/soyaine/JavaScript30) 、[winar-jin/JavaScript30-Challenge](https://github.com/winar-jin/JavaScript30-Challenge) 🦥
 
 
 
