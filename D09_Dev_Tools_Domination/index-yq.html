@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Console Tricks!</title>
+    </head>
+    <body>
+
+    <p onClick="makeGreen()">x试着点击我一下x</p>
+
+    <script>
+        const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+        function makeGreen() {
+        const p = document.querySelector('p');
+        p.style.color = '#BADA55';
+        p.style.fontSize = '50px';
+        }
+
+        // Regular
+        console.log("I'm good boy!");
+
+        // Interpolate
+        console.log("I'm good boy! %s",'🐱‍🚀')
+
+        // Styled
+        console.log("%cI'm good boy!",'font-size:30px;');
+
+        // warning!
+        console.warn("warning! 我可警告你哦~")
+
+        // Error :|
+        console.error("error~别又来报错了！╭(╯^╰)╮");
+
+        // Info
+        console.info("Talk is cheap. Show me the code");
+
+        // Viewing DOM Elements
+        // 打印输出 DOM 元素
+        const p = document.querySelector('p');
+        console.log(p);
+        console.dir(p);
+
+        // Testing
+        console.assert(1 === 1, "（这句发布时删除）");
+        console.assert(1 === 0, "看看看，失策了吧");
+        console.assert(p.innerHTML.match("她"), "我这儿才没有她这个人");
+
+        // clearing
+        // console.clear();
+
+        // Grouping together
+        dogs.forEach(dog => {
+        console.group();
+        // console.groupCollapsed(); 
+        // 收起列表
+        console.log(`${dog.name}`);
+        console.log(`${dog.age}`);
+        console.log(`${dog.name} 有 ${dog.age} 岁了`);
+        console.groupEnd();
+        });
+
+        console.table(dogs);
+        console.table(dogs, ["age"]);
+
+        // counting
+        console.count("（读来过反）羊只");
+        console.count("（读来过反）羊只");
+        console.count("（读来过反）鱼条");
+        console.count("（读来过反）羊只");
+        console.count("（读来过反）羊只");
+        console.count("（读来过反）鱼条");
+        console.count("（读来过反）鱼条");
+        console.count("（读来过反）羊只");
+
+        // timing
+        console.time('fetch my data');
+        fetch("https://api.github.com/users/shianiiiu")
+        .then(data => data.json())
+        .then(data => {
+            console.timeEnd('fetch my data');
+            console.log(data);
+        });
+        // console.timeEnd('fetch my data');
+    </script>
+</body>
+</html>
