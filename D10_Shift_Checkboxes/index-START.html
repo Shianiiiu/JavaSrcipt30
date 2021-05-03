@@ -106,24 +106,24 @@
 
 
   //方法一
-  function handleCheck(e) {
-    let inBetween = false;
+  // function handleCheck(e) {
+  //   let inBetween = false;
 
-    if(e.shiftKey && this.checked && lastCheck && lastCheck.checked) {
-      checkboxes.forEach(checkbox => {
-        // console.log(checkbox)
-        if(checkbox === lastCheck || checkbox === this) {
-          inBetween = !inBetween;
-        }
-        if(inBetween) {
-          checkbox.checked = true;
-        }
-      });  
-    }
-    if(this.checked){
-      lastCheck = this;
-    }
-  }
+  //   if(e.shiftKey && this.checked && lastCheck && lastCheck.checked) {
+  //     checkboxes.forEach(checkbox => {
+  //       // console.log(checkbox)
+  //       if(checkbox === lastCheck || checkbox === this) {
+  //         inBetween = !inBetween;
+  //       }
+  //       if(inBetween) {
+  //         checkbox.checked = true;
+  //       }
+  //     });  
+  //   }
+  //   if(this.checked){
+  //     lastCheck = this;
+  //   }
+  // }
 
 
   //方法二
