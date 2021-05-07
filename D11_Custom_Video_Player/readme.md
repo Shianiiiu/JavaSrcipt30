@@ -22,7 +22,9 @@
 
 ## 实现效果
 
-![video player](https://picgo-bed-1305701422.cos.ap-shanghai.myqcloud.com/picgo/20210507131349_D11.gif)
+![image-20210507140017368](https://picgo-bed-1305701422.cos.ap-shanghai.myqcloud.com/picgo/20210507140018.png)
+
+![image-20210507140040945](https://picgo-bed-1305701422.cos.ap-shanghai.myqcloud.com/picgo/20210507140041.png)
 
 实现视频的播放，暂停，进度条拖拽，音量加减，播放速度加减，快进快退的功能。
 
