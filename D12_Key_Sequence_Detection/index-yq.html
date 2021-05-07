@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+
+  <h3>同志，请输入暗号🐱‍👤</h3>
+
+<script>
+  const pressed = []
+  const secretCode = 'shian'
+
+
+  window.addEventListener('keyup', (e) => {
+    console.log(e.key)
+    pressed.push(e.key)
+    console.log(pressed)
+
+    //截取数组，保证长度为暗号的长度，队列形式推入推出
+    pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+    console.log(pressed)
+
+    if(pressed.join('').includes('shian')){
+      console.log('Bingo')
+      cornify_add();
+    }
+  })
+</script>
+</body>
+</html>
