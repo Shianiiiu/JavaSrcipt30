@@ -15,6 +15,8 @@
 
 ![slide  scroll](https://picgo-bed-1305701422.cos.ap-shanghai.myqcloud.com/picgo/20210508112836_D13_SlideScroll.gif)
 
+(图片大小限制，可在文件中查看)
+
 页面中的文章有几张配图，随着页面上下滚动，图片位置划过图片一半时，图片从两侧滑入；图片位置离开可见区域时，图片向两侧滑出。
 
 
