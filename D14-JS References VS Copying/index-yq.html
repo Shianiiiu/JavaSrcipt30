@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Reference VS Copy</title>
+</head>
+<body>
+
+  <script>
+    // start with strings, numbers and booleans
+
+    // Let's say we have an array
+    const players = ['Shian', 'Sarah', 'Ryan', 'Poppy'];
+
+    // and we want to make a copy of it.
+
+    // You might think we can just do something like this:
+
+    // however what happens when we update that array?
+
+    // now here is the problem!
+
+    // oh no - we have edited the original array too!
+
+    // Why? It's because that is an array reference, not an array copy. They both point to the same array!
+
+    // So, how do we fix this? We take a copy instead!
+
+    // one way 
+    //使用slice方法切片
+
+    const team1 =  players.slice()
+    team1[3] = 'Alec'
+    console.log(players, team1)
+
+    // or create a new array and concat the old one in
+    const team2 = [].concat(players)
+    team2[3] = 'Alec'
+    console.log(players, team2)
+
+    // or use the new ES6 Spread
+
+    const team3 = [...players]
+    team3[3] = 'Alec'
+    console.log(players, team3)
+
+    // 使用Array创建新的数组实例
+
+    const team4 = Array.from(players)
+    team4[3] = 'Alec'
+    console.log(players, team4)
+    
+    // now when we update it, the original one isn't changed
+
+    // The same thing goes for objects, let's say we have a person object
+
+    // with Objects
+    const person = {
+      name: 'Shian Gee',
+      age: 21
+    };
+
+    // and think we make a copy:
+
+    // const p1 = person;
+    // p1['age'] = 18;
+    // console.log(person, p1)
+
+    // how do we take a copy instead?
+
+    const p2 = Object.assign({}, person, { number: 99, age: 18 })
+    // p2.age = 18;
+    console.log(person, p2)
+
+    // We will hopefully soon see the object ...spread
+
+    // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
+
+    //借助json
+
+    const json = JSON.stringify(person)
+    // console.log(json)
+    const p3 = JSON.parse(json)
+    p3.age = 18
+    console.log(person, p3)
+
+
+  </script>
+
+</body>
+</html>
