@@ -90,20 +90,20 @@
 
 ### 1、鼠标事件的几个属性实例
 
-- event.clientX、event.clientY:鼠标相对于浏览器窗口可视区域的X，Y坐标（窗口坐标），可视区域不包括工具栏和滚动条。IE事件和标准事件都定义了这2个属性.
-- event.pageX、event.pageY:类似于event.clientX、event.clientY，但它们使用的是__文档坐标__而非窗口坐标。这2个属性不是标准属性，但得到了广泛支持。IE事件中没有这2个属性。
-- event.offsetX、event.offsetY:鼠标相对于事件源元素（srcElement）(鼠标点击的元素)的X,Y坐标，只有IE事件有这2个属性，标准事件没有对应的属性。
-- event.screenX、event.screenY:鼠标相对于用户显示器屏幕左上角的X,Y坐标。标准事件和IE事件都定义了这2个属性。
+- `event.clientX`、`event.clientY`:鼠标相对于浏览器窗口可视区域的X，Y坐标（窗口坐标），可视区域不包括工具栏和滚动条。IE事件和标准事件都定义了这2个属性.
+- `event.pageX`、`event.pageY`:类似于event.clientX、event.clientY，但它们使用的是**文档坐标**而非窗口坐标。这2个属性不是标准属性，但得到了广泛支持。IE事件中没有这2个属性。
+- `event.offsetX`、`event.offsetY`:鼠标相对于事件源元素（srcElement）(鼠标点击的元素)的X,Y坐标，只有IE事件有这2个属性，标准事件没有对应的属性。
+- `event.screenX`、`event.screenY`:鼠标相对于用户显示器屏幕左上角的X,Y坐标。标准事件和IE事件都定义了这2个属性。
 
 
 
 ### 2、页面元素offset的几个属性示例
 
-- [HTMLElement.offsetParent](https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/offsetParent)：是一个只读属性，指向最近的包含该元素的__定位__元素.如果没有定位的元素，则 offsetParent 为最近的 table 元素对象或根元素（标准模式下为 html；quirks 模式下为 body）。当元素的 style.display 设置为 "none" 时，offsetParent 返回 null。 offsetParent 很有用，因为 *offsetTop* 和 *offsetLeft* 都是相对于其**内边距边界**的。
-- `HTMLElement.offsetTop`：指的是当前元素到其offsetParent指向元素的__上边距__的距离。
-- `HTMLElement.offsetLeft`：指的是当前元素到其offsetParent指向元素的__左边距__的距离。
-- `HTMLElement.offsetHeight`：指的是当前元素的__高度__，包含__content，padding，border__的高度值，但不包括__margin__的值。
-- `HTMLElement.offsetWidth`：指的是当前元素的__宽度__，包含__content，padding，border__的高度值，但不包括__margin__的值。
+- [HTMLElement.offsetParent](https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/offsetParent)：是一个只读属性，指向最近的包含该元素的**定位**元素.如果没有定位的元素，则 offsetParent 为最近的 table 元素对象或根元素（标准模式下为 html；quirks 模式下为 body）。当元素的 style.display 设置为 "none" 时，offsetParent 返回 null。 offsetParent 很有用，因为 *offsetTop* 和 *offsetLeft* 都是相对于其**内边距边界**的。
+- `HTMLElement.offsetTop`：指的是当前元素到其offsetParent指向元素的**上边距**的距离。
+- `HTMLElement.offsetLeft`：指的是当前元素到其offsetParent指向元素的**左边距**的距离。
+- `HTMLElement.offsetHeight`：指的是当前元素的**高度**，包含**content，padding，border**的高度值，但不包括**margin**的值。
+- `HTMLElement.offsetWidth`：指的是当前元素的**宽度**，包含**content，padding，border**的高度值，但不包括**margin**的值。
 
 
 
