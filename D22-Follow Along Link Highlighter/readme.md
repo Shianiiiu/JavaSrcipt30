@@ -115,6 +115,7 @@
 因此我们改变`top`和`left`的值的时候，应该把`window.scrollX`和`window.scrollY`加上。
 
 ```js
-highlight.style.transform = `translate(${coords.left}px,${coords.top}px)`
+top: linkCoords.top + window.scrollY,
+left: linkCoords.left + window.scrollX
 ```
 
