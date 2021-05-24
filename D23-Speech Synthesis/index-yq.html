@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Speech Synthesis</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="voiceinator">
+
+      <h1>The Voiceinator 5000</h1>
+
+      <select name="voice" id="voices">
+        <option value="">Select A Voice</option>
+      </select>
+
+      <label for="rate">Rate:</label>
+      <input name="rate" type="range" min="0" max="3" value="1" step="0.1">
+
+      <label for="pitch">Pitch:</label>
+      <input name="pitch" type="range" min="0" max="2" step="0.1">
+
+      <textarea name="text">Hello! My name is Hwang ShianGee!🌻</textarea>
+      <button id="stop">Stop!</button>
+      <button id="speak">Speak</button>
+
+    </div>
+
+<script>
+  const msg = new SpeechSynthesisUtterance();
+  let voices = [];
+  const voicesDropdown = document.querySelector('[name="voice"]');
+  const options = document.querySelectorAll('[type="range"], [name="text"]');
+  const speakButton = document.querySelector('#speak');
+  const stopButton = document.querySelector('#stop');
+
+  //获取读取的文字
+  msg.text = document.querySelector('[name=text]').value;
+  //全局对象speechSynthesis
+  const synth =  window.speechSynthesis;
+
+  function getSupportVoices(){
+    voices = synth.getVoices();
+    // console.log(voices);
+    voicesDropdown.innerHTML = voices
+      .map(voice => `<option value="${voice.name}">${voice.name} (${voice.lang})</option>`)
+      .join('');
+  }
+
+  function setVoice(){
+
+    //this指向被选择的option
+    // console.log(this.value)
+    msg.voice = voices.find(voice => voice.name === this.value)
+    //切换语言后播放
+    toggle();
+  }
+
+  //关闭当前并播放
+  function toggle(startover=true){
+    speechSynthesis.cancel();
+    if(startover){
+      speechSynthesis.speak(msg);
+    }
+  } 
+
+  function setOption(){
+    // console.log(this)
+    msg[this.name] = this.value;
+    toggle();
+  }
+
+  //监听语音对象的语言改变的事件
+  synth.addEventListener('voiceschanged',getSupportVoices);
+  voicesDropdown.addEventListener('change',setVoice);
+
+  //监听所有input
+  options.forEach(option => option.addEventListener('change',setOption));
+
+  //监听按钮
+  speakButton.addEventListener('click',toggle);
+  //不可以直接传入参数false
+  stopButton.addEventListener('click',toggle.bind(null,false));
+
+</script>
+
+</body>
+</html>
