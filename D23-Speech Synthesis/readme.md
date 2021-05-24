@@ -51,6 +51,8 @@
    - `SpeechSynthesis.speak()`：播放，将文字内容加入到播放序列中并开始播放语音；
    - `SpeechSynthesis.resume()`：继续，当语音处于暂停状态的时候，继续播放该语音；
 
+   
+   
    ```js
    let utterance = new SpeechSynthesisUtterance("Hello world!");
    var synth = window.speechSynthesis;
@@ -144,7 +146,7 @@
    }
    ```
 
-2. 使用绑定函数bind() [MDN参考](https://www.youtube.com/watch?v=saCpKH_xdgs&list=PLu8EoSxDXHP6CGK4YVJhL_VWetA865GOH&index=23)
+2. 使用绑定函数bind() [MDN参考](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
 
    ```js
    node.onclick = callback.bind(null,args);
