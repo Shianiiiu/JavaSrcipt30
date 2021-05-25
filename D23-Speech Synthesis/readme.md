@@ -1,6 +1,6 @@
 # Speech Synthesis 浏览器文本朗读 📢
 
-> 油管视频：[JavaScript Text-To-Speech](https://www.youtube.com/watch?v=saCpKH_xdgs&list=PLu8EoSxDXHP6CGK4YVJhL_VWetA865GOH&index=23)
+> 油管视频：[JavaScript Text-To-Speech](https://www.youtube.com/watch?v=saCpKH_xdgs&list=PLu8EoSxDXHP6CGK4YVJhL_VWetA865GOH&index=23) 📺
 > 本知识总结摘自：[soyainiJavaScript-30 中文练习指南](https://github.com/soyaine/JavaScript30) 、[winar-jin/JavaScript30-Challenge](https://github.com/winar-jin/JavaScript30-Challenge) 🦥
 
 
