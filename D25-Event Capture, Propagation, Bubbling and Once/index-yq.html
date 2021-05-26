@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Understanding JavaScript's Capture</title>
+</head>
+<body class="bod">
+
+  <div class="one">
+    <div class="two">
+      <div class="three">
+      </div>
+    </div>
+  </div>
+
+<style>
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after { 
+    box-sizing: inherit; 
+  }
+
+  body {
+    min-height: 100vh;
+  }
+
+  div {
+    width: 100%;
+    padding: 100px;
+  }
+
+  .one {
+    background: thistle;
+  }
+
+  .two {
+    background: mistyrose;
+  }
+
+  .three {
+    background: coral;
+  }
+</style>
+
+<script>
+  const divs = document.querySelectorAll('div');
+
+
+  function logtext(e){
+    //停止事件的传播，不单单只是冒泡
+    e.stopPropagation();
+
+    console.log(this.classList.value);
+  }
+
+  divs.forEach(div => {
+    div.addEventListener('click',logtext,{
+      capture: false,
+      //once 只触发一次
+      // once: true
+    })
+  })
+
+  document.body.addEventListener('click',logtext,{
+      capture: false,
+      //once 只触发一次
+      // once: true
+    });
+
+</script>
+</body>
+</html>
