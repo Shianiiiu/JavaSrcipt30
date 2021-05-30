@@ -14,7 +14,7 @@
 
 ## 实现效果
 
-<img src="https://picgo-bed-1305701422.cos.ap-shanghai.myqcloud.com/picgo/20210530193214_D28.gif" alt="speed controller" style="zoom:80%;" />
+<img src="https://picgo-bed-1305701422.cos.ap-shanghai.myqcloud.com/picgo/20210530201705.gif" alt="speed controller" style="zoom:80%;" />
 
 初始文档中提供了一个视频播放区域（使用的是H5原生的控制器）以及一个表示播放速度的滑块区域。当鼠标移动，滑块跟着上下调节，实时改变视频播放的速度。~~又是这只胖兔子🤦‍♂️~~
 
